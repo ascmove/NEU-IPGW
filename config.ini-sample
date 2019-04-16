@@ -1,0 +1,41 @@
+# Configuration for ipgw and other services.
+# 使用前将文件名更该文config.ini
+[eth]
+# 用来获取IP地址，可以通过ifconfig查看网卡名
+eth_name = enp0s25
+
+[ipgw]
+# 网关账号
+ipgw_account = 1700000
+# 网关密码
+ipgw_passwd = IPGW_PASSWORD
+# 认证地址
+srun_portal_pc_url = http://202.118.1.87/srun_portal_pc.php?ac_id=1&
+# 在线信息
+auth_action_url = http://202.118.1.87/include/auth_action.php
+# 测试联网链接
+test_connection_url = http://www.baidu.com/
+
+[email]
+# SMTP服务器
+mail_host = smtp.stu.neu.edu.cn
+# pop3_server
+pop3_server = pop3.stu.neu.edu.cn
+# 用户名
+mail_user = yourownemailname@stumail.neu.edu.cn
+# 登录密码
+mail_pass = EMAIL_PASSWORD
+# 发件人邮箱
+sender = yourownemailname@stumail.neu.edu.cn
+# 接收邮件，可以是外网邮箱，如Gmail
+receiver = RECEIVER_EMAIL
+# 新IP邮件标题
+new_ip_email_title = New IP Address
+# 启动提醒标题
+boot_email_title = System Boot
+
+[access]
+access_forbidden_file = /usr/local/neu/access_forbidden.log
+
+[boot]
+boot_log = /usr/local/neu/boot.log
